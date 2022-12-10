@@ -23,15 +23,23 @@ export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Image
-          source={require('./assets/pokedexLogo.png')}
-          style={styles.logo}
-        />
-
-        {pokemons.map(item => {
-          return <Pokemon name={item.name} />;
-        })}
-        <StatusBar style="auto" />
+        <View style={styles.header}>
+          <Text style={styles.logo}>Pokedex</Text>
+          <Text style={styles.paragraphHeader}>
+            Procure o Pokemon pelo nome ou ID usando a nossa Pokedex
+          </Text>
+          <TextInput
+            style={styles.inputSearch}
+            placeholder="Nome ou ID"
+            placeholderTextColor="#000"
+          />
+        </View>
+        <View style={styles.pokemons}>
+          {pokemons.map(item => {
+            return <Pokemon name={item.name} />;
+          })}
+        </View>
+        <StatusBar style="inverted" />
       </View>
     </ScrollView>
   );
@@ -42,24 +50,41 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#1E1E1E',
     alignItems: 'center',
+    paddingBottom: 70,
   },
   text: {
     color: '#aaa',
   },
+  header: {
+    marginTop: 70,
+    padding: 45,
+    height: 200,
+    textAlign: 'left',
+    width: '100%',
+    alignItems: 'flex-start',
+  },
   logo: {
-    margin: 0,
-    padding: 0,
-    width: 300,
-    height: 300,
-    resizeMode: 'contain',
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: '800',
+    textAlign: 'left',
+  },
+  paragraphHeader: {
+    color: '#fff',
+    textAlign: 'left',
+    marginTop: 10,
   },
   inputSearch: {
-    borderWidth: 1,
-    borderColor: '#aaa',
     padding: 10,
-    margin: 5,
     color: '#aaa',
-    borderRadius: 15,
-    width: 200,
+    width: '100%',
+    marginTop: 20,
+    borderRadius: 5,
+    backgroundColor: 'rgba(255, 255, 255, 0.22)',
+  },
+  pokemons: {
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

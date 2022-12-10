@@ -17,8 +17,9 @@ const styles = StyleSheet.create({
   typePokemon: {
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    margin: 20,
+    justifyContent: 'space-between',
+    marginTop: 10,
+    width: '70%',
   },
   text: {
     borderWidth: 1,
@@ -27,5 +28,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     color: '#fff',
     textTransform: 'capitalize',
+    fontSize: 10,
   },
 });

@@ -29,13 +29,13 @@ export default function Pokemon({ name }) {
             ? ('00000' + pokemonId).slice(-5)
             : ('000' + pokemonId).slice(-3)}
         </Text>
+        <PokemonType pokemonType={pokemonType} />
       </View>
       <Image
         style={styles.pokemonImage}
         source={{ uri: pokemonImage }}
         alt="PokemonImage"
       />
-      <PokemonType pokemonType={pokemonType} />
     </View>
   );
 }
@@ -43,32 +43,33 @@ export default function Pokemon({ name }) {
 const styles = StyleSheet.create({
   pokemonCard: {
     borderWidth: 1,
-    borderColor: '#aaa',
-    padding: 10,
+    borderColor: '#fff',
+    width: 350,
+    height: 150,
     margin: 10,
     borderRadius: 20,
+    padding: 15,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
   pokemonInfo: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 20,
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    flex: 1,
+    flexDirection: 'column',
   },
   pokemonTitle: {
+    fontSize: 20,
     textTransform: 'capitalize',
-    textAlign: 'center',
+
     color: '#aaa',
-    fontSize: 25,
-    fontWeight: '800',
   },
   pokemonId: {
     color: '#4c4c4c',
-    fontSize: 15,
   },
   pokemonImage: {
-    width: 250,
-    height: 250,
-    margin: 30,
+    width: 140,
+    height: 140,
     resizeMode: 'contain',
   },
 });
