@@ -43,7 +43,7 @@ export default function Pokemon({ name }) {
 const styles = StyleSheet.create({
   pokemonCard: {
     borderWidth: 1,
-    borderColor: '#fff',
+    borderColor: '#e28743',
     width: 350,
     height: 150,
     margin: 10,
