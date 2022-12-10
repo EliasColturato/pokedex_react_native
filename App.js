@@ -57,11 +57,11 @@ const styles = StyleSheet.create({
   },
   header: {
     marginTop: 70,
-    padding: 45,
     height: 200,
     textAlign: 'left',
-    width: '100%',
+    width: '85%',
     alignItems: 'flex-start',
+    justifyContent: 'space-evenly',
   },
   logo: {
     color: '#fff',
