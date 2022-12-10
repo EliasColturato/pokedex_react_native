@@ -34,7 +34,7 @@ export default function App() {
             placeholderTextColor="#000"
           />
         </View>
-        <View style={styles.pokemons}>
+        <View>
           {pokemons.map(item => {
             return <Pokemon name={item.name} />;
           })}
@@ -81,10 +81,5 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderRadius: 5,
     backgroundColor: 'rgba(255, 255, 255, 0.22)',
-  },
-  pokemons: {
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
